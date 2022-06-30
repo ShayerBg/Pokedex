@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "Retro Computer";
+  src: url("../fonts/RetroComputer.woff2") format("woff2"), url("../fonts/RetroComputer.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  margin: 0;
+  font-family: "Retro Computer";
+  background-image: url(../img/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+body p {
+  margin: 0;
+}
+
+.head {
+  background-image: linear-gradient(77deg, #e11014, #cd0f13);
+  border-radius: 20px 20px 0 0;
+  width: 50%;
+}
+
+.out {
+  width: 95%;
+  background-image: linear-gradient(347deg, #1a0708, #ed1115);
+  padding: 50px 0;
+  border-radius: 50px;
+  position: relative;
+  max-height: 900px;
+}
+
+.pokedex {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 0.4em;
+  color: white;
+}
+
+.content {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 30px;
+  background-color: #501718;
+  border-radius: 50px;
+  box-shadow: inset 0 0 20px 3px #0c0203;
+  overflow-y: auto;
+}
+.content .contenedor {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background-color: #558599;
+  filter: grayscale(1);
+  border-radius: 23px;
+  transition: 0.3s;
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+  text-align: center;
+}
+.content .contenedor:hover {
+  filter: grayscale(0);
+  box-shadow: 11px 13px 13px 0px #5b2425;
+}
+.content .contenedor .stat_contenedor_padre {
+  display: none;
+}
+.content .contenedor .stat_contenedor_padre p {
+  margin-right: 4px;
+}
+.content .contenedor .stat_contenedor_padre.active {
+  display: block;
+}
+.content .contenedor .stat_contenedor_padre .nombre_stats, .content .contenedor .stat_contenedor_padre .nombre_abilities {
+  margin: 10px 0px;
+  color: #b12a2c;
+}
+.content .contenedor .cont_principal.disable {
+  display: none;
+}
+.content .contenedor .stat_contenedor {
+  display: flex;
+  align-items: center;
+}
+.content .contenedor .stat_contenedor div:nth-child(3) {
+  color: #12e512;
+}
+.content .contenedor .contenedor_imagen {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.content .contenedor .contenedor_imagen img {
+  width: 150px;
+}
+
+.paginacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 30px 0;
+}
+.paginacion button {
+  font-size: 40px;
+  width: 60px;
+  border-radius: 30px;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  filter: invert(1);
+}
+.paginacion button:hover {
+  box-shadow: 5px 1px 12px 3px #5b2425;
+}
+.paginacion .back {
+  transform: rotate(180deg);
+}
+
+.outside {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  max-height: 800px;
+}
+
+@media (max-width: 900px) {
+  .pokedex {
+    font-size: 25px;
+  }
+}
+@media (max-width: 750px) {
+  .contenedor {
+    filter: grayscale(0) !important;
+  }
+}
+@media (max-width: 500px) {
+  .pokedex {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=style.css.map */
